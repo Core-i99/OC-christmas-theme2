@@ -12,8 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # chmod
+      - name: set execute permission
+        run: sudo chmod +x ./Source/Tools/icnspack
+      
       - name: Run build script
-        run: sudo python3 ./buildicns.py
+        run: sudo sudo python3 ./buildicns.py
 
       - name: Zip icns folder
         run: cd ./export && zip -r icns.zip ./icns
