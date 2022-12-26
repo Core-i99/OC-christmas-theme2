@@ -19,11 +19,8 @@ jobs:
       - name: Run build script
         run: sudo sudo python3 ./buildicns.py
 
-      - name: Zip icns folder
-        run: cd ./Export && zip -r icns.zip ./icns
-
       - name: Upload to Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: icns
-          path: ./Export/icns.zip
+          path: ./Export/icns
