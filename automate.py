@@ -55,42 +55,42 @@ with Session(photoshopTemplatePath, action="open") as ps:
         SnowPile3Layer = ps.app.activeDocument.layers.getByName("Snowpile3")
         SnowPile4Layer = ps.app.activeDocument.layers.getByName("Snowpile4")
         SnowPile5Layer = ps.app.activeDocument.layers.getByName("Snowpile5")
-        if pictureFileName in snowPile1FileNames:
-            SnowPile1Layer.visible = True
-            SnowPile2Layer.visible = False
-            SnowPile3Layer.visible = False
-            SnowPile4Layer.visible = False
-            SnowPile5Layer.visible = False
-        elif pictureFileName in snowPile2FileNames:
-            SnowPile1Layer.visible = False
-            SnowPile2Layer.visible = True
-            SnowPile3Layer.visible = False
-            SnowPile4Layer.visible = False
-            SnowPile5Layer.visible = False
-        elif pictureFileName in snowPile3FileNames:
-            SnowPile1Layer.visible = False
-            SnowPile2Layer.visible = False
-            SnowPile3Layer.visible = True
-            SnowPile4Layer.visible = False
-            SnowPile5Layer.visible = False
-        elif pictureFileName in snowPile4FileNames:
-            SnowPile1Layer.visible = False
-            SnowPile2Layer.visible = False
-            SnowPile3Layer.visible = False
-            SnowPile4Layer.visible = True
-            SnowPile5Layer.visible = False
-        elif pictureFileName in snowPile5FileNames:
-            SnowPile1Layer.visible = False
-            SnowPile2Layer.visible = False
-            SnowPile3Layer.visible = False
-            SnowPile4Layer.visible = False
-            SnowPile5Layer.visible = True
-        else:
-            SnowPile1Layer.visible = False
-            SnowPile2Layer.visible = False
-            SnowPile3Layer.visible = False
-            SnowPile4Layer.visible = False
-            SnowPile5Layer.visible = False
+        # if pictureFileName in snowPile1FileNames:
+        #     SnowPile1Layer.visible = True
+        #     SnowPile2Layer.visible = False
+        #     SnowPile3Layer.visible = False
+        #     SnowPile4Layer.visible = False
+        #     SnowPile5Layer.visible = False
+        # elif pictureFileName in snowPile2FileNames:
+        #     SnowPile1Layer.visible = False
+        #     SnowPile2Layer.visible = True
+        #     SnowPile3Layer.visible = False
+        #     SnowPile4Layer.visible = False
+        #     SnowPile5Layer.visible = False
+        # elif pictureFileName in snowPile3FileNames:
+        #     SnowPile1Layer.visible = False
+        #     SnowPile2Layer.visible = False
+        #     SnowPile3Layer.visible = True
+        #     SnowPile4Layer.visible = False
+        #     SnowPile5Layer.visible = False
+        # elif pictureFileName in snowPile4FileNames:
+        #     SnowPile1Layer.visible = False
+        #     SnowPile2Layer.visible = False
+        #     SnowPile3Layer.visible = False
+        #     SnowPile4Layer.visible = True
+        #     SnowPile5Layer.visible = False
+        # elif pictureFileName in snowPile5FileNames:
+        #     SnowPile1Layer.visible = False
+        #     SnowPile2Layer.visible = False
+        #     SnowPile3Layer.visible = False
+        #     SnowPile4Layer.visible = False
+        #     SnowPile5Layer.visible = True
+        # else:
+        SnowPile1Layer.visible = False
+        SnowPile2Layer.visible = False
+        SnowPile3Layer.visible = False
+        SnowPile4Layer.visible = False
+        SnowPile5Layer.visible = False
 
         # Save as PNG
         ps.app.activeDocument.saveAs(os.path.join(exportPngPath, pictureFileName), ps.PNGSaveOptions())
