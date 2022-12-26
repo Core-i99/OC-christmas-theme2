@@ -127,6 +127,7 @@ for imageFile in os.listdir(pngOrigPath):
 # Convert PNG to ICNS
 for imageFile in os.listdir(exportPngPath):
     # call subprocess to run icnspack.exe
+    # ./icnspack HardDrive.icns ~/Desktop/HardDrive_128.png ~/Desktop/HardDrive_256.png 
     icnsPackPath = os.path.join(toolsPath, "icnspack.exe")
     icnsFilePath = os.path.join(exportIcnsPath, imageFile.replace(".png", ".icns"))
     pngFilePath = os.path.join(exportPngPath, imageFile)
