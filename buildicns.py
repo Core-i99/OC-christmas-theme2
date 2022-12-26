@@ -14,9 +14,8 @@ pngOrigPath = os.path.join(os.getcwd(), pngOrigLocation)
 toolsLocation = "Source/Tools"
 toolsPath = os.path.join(os.getcwd(), toolsLocation)
 
-for imageFile in os.listdir(exportPngPath):
-    # call subprocess to run icnspack
-    icnsPackPath = os.path.join(toolsPath, "icnspack")
-    icnsFilePath = os.path.join(exportIcnsPath, imageFile.replace(".png", ".icns"))
-    pngFilePath = os.path.join(exportPngPath, imageFile)
-    subprocess.Popen(['sh', icnsPackPath, icnsFilePath, pngFilePath, pngFilePath])
+# call subprocess to run icnspack
+icnsPackPath = os.path.join(toolsPath, "icnspack")
+icnsFilePath = os.path.join(exportIcnsPath, "Apple.icns")
+pngFilePath = os.path.join(exportPngPath, "Apple.png")
+subprocess.Popen(['sh', icnsPackPath, icnsFilePath, pngFilePath, pngFilePath])
