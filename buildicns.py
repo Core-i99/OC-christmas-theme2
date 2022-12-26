@@ -19,4 +19,4 @@ for imageFile in os.listdir(exportPngPath):
     icnsPackPath = os.path.join(toolsPath, "icnspack")
     icnsFilePath = os.path.join(exportIcnsPath, imageFile.replace(".png", ".icns"))
     pngFilePath = os.path.join(exportPngPath, imageFile)
-    subprocess.call([icnsPackPath, icnsFilePath, pngFilePath, pngFilePath])
+    subprocess.Popen(['sh', icnsPackPath, icnsFilePath, pngFilePath, pngFilePath])
