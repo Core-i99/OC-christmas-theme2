@@ -16,6 +16,9 @@ jobs:
       - name: Install prospector
         run: pip install prospector
 
+      - name: Install dependencies
+        run: pip install photoshop_python_api pillow
+
       - name: Run prospector
         run: |
           python3 -m prospector > prospector_result.txt || exit 1
