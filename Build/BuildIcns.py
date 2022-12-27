@@ -7,7 +7,7 @@ export_png_location = "png"
 export_png_1x_location = "1x"
 export_png_2x_location = "2x"
 export_png_orig_location = "pngOrig"
-export_icns_location = "icns"
+export_icns_location = "icns/Core-i99/Christmas2"
 tools_location = "Source/Tools"
 
 # Paths
@@ -20,7 +20,7 @@ export_icns_path = os.path.join(export_path, export_icns_location)
 tools_path = os.path.join(os.getcwd(), tools_location)
 
 # Create directories
-if not os.path.exists(export_icns_path):
+if os.path.exists(export_icns_path):
     os.makedirs(export_icns_path)
 
 # Convert PNG to ICNS
