@@ -21,4 +21,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Core-i99-OC-Christmas-Theme-2
-          path: ./Export/icns/Core-i99
+          path: ./Export/icns
