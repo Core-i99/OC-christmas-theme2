@@ -20,7 +20,7 @@ export_icns_path = os.path.join(export_path, export_icns_location)
 tools_path = os.path.join(os.getcwd(), tools_location)
 
 # Create directories
-if os.path.exists(export_icns_path):
+if not os.path.exists(export_icns_path):
     os.makedirs(export_icns_path)
 
 # Convert PNG to ICNS
