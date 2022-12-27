@@ -1,0 +1,22 @@
+name: Build Icns
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  build-image:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run build script
+        run: sudo sudo python3 .Build/BuildIcns.py
+
+      - name: Upload to Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: icns
+          path: ./Export/icns

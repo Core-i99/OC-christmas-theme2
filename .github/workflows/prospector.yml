@@ -1,0 +1,25 @@
+name: Prospector
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  prospector:
+    name: Run Prospector
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run prospector
+        run: |
+          python3 -m prospector > prospector_result.txt || exit 1
+      
+      - name: Upload Prospector result to Artifacts
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: Prospector Result
+          path: ./prospector_result.txt
