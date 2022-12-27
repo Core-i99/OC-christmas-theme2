@@ -1,8 +1,8 @@
 # OC Christmas Theme 2
 A Christmas theme for OpenCore
 
-<!-- <img src="Preview/Preview1.png">
-<img src="Preview/Preview2.png"> -->
+<img src="Preview/Preview1.png">
+<img src="Preview/Preview2.png">
 
 ## Requirements
 - OpenCore 0.7.0 or newer
