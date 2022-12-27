@@ -1,5 +1,6 @@
 import os
 import subprocess
+import shutil
 
 # Locations
 export_location = "Export"
@@ -30,3 +31,5 @@ for image_file in os.listdir(export_png_1x_path):
     icns_file_1x_path = os.path.join(export_png_1x_path, image_file)
     icns_file_2x_path = os.path.join(export_png_2x_path, image_file)
     subprocess.call([icnspackpath, icns_file_path, icns_file_1x_path, icns_file_2x_path])
+
+shutil.make_archive("./Export/Core-i99-christmas-theme2", "zip", "./Export/icns")

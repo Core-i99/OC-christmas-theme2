@@ -22,3 +22,12 @@ jobs:
         with:
           name: Core-i99-OC-Christmas-Theme-2
           path: ./Export/icns
+
+       - name: Upload to Release
+        if: github.event_name == 'release'
+        uses: svenstaro/upload-release-action@e74ff71f7d8a4c4745b560a485cc5fdb9b5b999d
+        with:
+          repo_token: ${{ secrets.TOKEN }}
+          file: ./Export/Core-i99-christmas-theme2.zip
+          tag: ${{ github.ref }}
+          file_glob: true
