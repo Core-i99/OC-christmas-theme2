@@ -1,6 +1,8 @@
 name: Build Icns
 
 on:
+  push:
+  pull_request:
   workflow_dispatch:
   release:
     types: [published]
